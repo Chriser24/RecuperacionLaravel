@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\trainers>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class TrainersFactory extends Factory
+class PlayersFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,8 +20,7 @@ class TrainersFactory extends Factory
             //
             'name' => fake()->name(),
             'lastname' => fake()->lastname(),
-            'age' => fake()->numberBetween([15, 35]),
-            'birthday' => fake()->date()
+            'score' => fake()->numberBetween([1, 10])
         ];
     }
 }

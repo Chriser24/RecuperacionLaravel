@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class sports extends Model
+class Sports extends Model
 {
     use HasFactory;
     protected $fillable =[
@@ -15,5 +15,8 @@ class sports extends Model
 
     public function positions(){
         $this->hasMany(positions::class);
+    }
+    public function teams(){
+        $this->hasMany(teams::class);
     }
 }
